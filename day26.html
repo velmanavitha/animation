@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+
+        .child1{
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            padding-top: 20%;
+            gap: 10px;
+        }
+        .c1{
+            background-color:deeppink;
+            border-radius: 20px;
+            width: 20px;
+            height: 20px;
+            animation-name: moving;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-delay: 1s;
+
+        }
+        .c2{
+           
+            background-color: deeppink;
+            border-radius: 20px;
+            width: 20px;
+            height: 20px; 
+            animation-name: moving;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-delay: 2s;
+        }
+        .c3{
+            
+            background-color: deeppink;
+            border-radius: 20px;
+            width: 20px;
+            height: 20px;
+            animation-name: moving;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-delay: 3s;
+        }
+
+        .child2{
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            gap: 14px;
+        
+        }
+        .d1{
+            background-color: deepskyblue;
+            border-radius: 20px;
+            height: 20px;
+            width: 20px;
+            animation-name: change;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-delay: 1s;
+        }
+        .d2{
+            background-color: deepskyblue;
+            border-radius: 20px;
+            height: 20px;
+            width: 20px;
+            animation-name: change;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-delay: 2s;
+        
+            
+        }
+        .d3{
+            background-color:deepskyblue;
+            border-radius: 20px;
+            height: 20px;
+            width: 20px;
+            animation-name: change;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-delay: 3s;
+        }
+
+        .b{           
+          margin-left: 40%;
+          padding: 40px;
+        }
+        .b1:hover~img{
+            transform: translate(100px,100px);
+            transition-duration: 3s;
+        }
+        .b2:hover~img{
+            transform: rotate(180deg);
+            transition-duration: 3s;
+        }
+        .b3:hover~img{
+            transform: scale(0.5);
+            transition-duration: 3s;
+        }
+        .b4:hover~img{
+            transform: skew(30deg,30deg);
+            transition-duration: 3s;
+        }
+        @keyframes moving {
+            0%{
+                transform: translate(0px,-100px);
+            }
+            50%{
+                transform: translate(0px,0px);
+            }
+            100%{
+                transform: translate(0px,-100px);
+            }
+        }
+
+        @keyframes change {
+            0%{
+                transform:  scale(0.5);
+                background-color: deepskyblue;
+            }
+            50%{
+                transform: scale(1.5);
+                background-color:deepskyblue;
+            }
+            100%{
+                transform: scale(0.5);
+                background-color: deepskyblue;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="child1">
+        <div class="c1"></div>
+        <div class="c2"></div>
+        <div class="c3"></div>
+    </div><br><br><br>
+    <div class="child2">
+        <div class="d1"></div>
+        <div class="d2"></div>
+        <div class="d3"></div>
+    </div><br><br><br><br>
+    <div class="b">
+        <button class="b1">translate</button>
+        <button class="b2">rotate</button>
+        <button class="b3">scale</button>
+        <button class="b4">skew</button><br><br><br><br>
+        <img src="dog1.png" style="height: 30vh;width: 30%;">
+    </div>
+</body>
+</html>
